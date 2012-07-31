@@ -11,7 +11,7 @@ COMPRESS_REVISION_NUMBER = '1.2.1'
 
 #Blog Integration: Tumblr
 TUMBLR_BLOG_URL = 'daneguempel.tumblr.com'
-TUMBLR_API_URL = 'api.tumblr.com/v2/blog/{0}'.format(TUMBLR_BLOG_URL)
+TUMBLR_API_URL = 'http://api.tumblr.com/v2/blog/{0}'.format(TUMBLR_BLOG_URL)
 TUMBLR_API_KEY = get_var('TUMBLR_API_KEY')
 
 #RSS Feed Integration: (by default use Tumbrl rss feed)
