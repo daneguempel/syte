@@ -1,9 +1,11 @@
-<<<<<<< HEAD
 # -*- coding: utf-8 -*-
-=======
 import os
+def get_var(var):
+	if os.environ.has_key(var):
+		return os.environ[var]
+	else:
+		return ''
 
->>>>>>> Adding os settings
 DEPLOYMENT_MODE = 'prod'
 COMPRESS_REVISION_NUMBER = '1.1'
 
@@ -12,7 +14,7 @@ BLOG_PLATFORM = 'tumblr'  # Wordpress or tumblr
 #Blog Integration: Tumblr
 TUMBLR_BLOG_URL = 'daneguempel.tumblr.com'
 TUMBLR_API_URL = 'api.tumblr.com/v2/blog/{0}'.format(TUMBLR_BLOG_URL)
-TUMBLR_API_KEY = os.environ['TUMBLR_API_KEY']
+TUMBLR_API_KEY = get_var('TUMBLR_API_KEY')
 
 #Blog Integration: Wordpress
 WORDPRESS_BLOG_URL = '[ENTER WORDPRESS BLOG URL] ex. gordonkoo.wordpress.com'
@@ -25,22 +27,22 @@ RSS_FEED_URL = 'http://{0}/rss'.format(TUMBLR_BLOG_URL)
 #Twitter Integration
 TWITTER_INTEGRATION_ENABLED = True
 TWITTER_API_URL = 'https://api.twitter.com/'
-TWITTER_CONSUMER_KEY = os.environ['TWITTER_CONSUMER_KEY']
-TWITTER_CONSUMER_SECRET = os.environ['TWITTER_CONSUMER_SECRET']
-TWITTER_USER_KEY = os.environ['TWITTER_USER_KEY']
-TWITTER_USER_SECRET = os.environ['TWITTER_USER_SECRET']
+TWITTER_CONSUMER_KEY = get_var('TWITTER_CONSUMER_KEY')
+TWITTER_CONSUMER_SECRET = get_var('TWITTER_CONSUMER_SECRET')
+TWITTER_USER_KEY = get_var('TWITTER_USER_KEY')
+TWITTER_USER_SECRET = get_var('TWITTER_USER_SECRET')
 
 
 #Github Integration
 GITHUB_INTEGRATION_ENABLED = True
 GITHUB_API_URL = 'https://api.github.com/'
-GITHUB_ACCESS_TOKEN = os.environ['GITHUB_ACCESS_TOKEN']
+GITHUB_ACCESS_TOKEN = get_var('GITHUB_ACCESS_TOKEN')
 
 GITHUB_OAUTH_ENABLED = True
-GITHUB_CLIENT_ID = os.environ['GITHUB_CLIENT_ID']
-GITHUB_CLIENT_SECRET = os.environ['GITHUB_CLIENT_SECRET']
-GITHUB_OAUTH_AUTHORIZE_URL = os.environ['GITHUB_OAUTH_AUTHORIZE_URL']
-GITHUB_OAUTH_ACCESS_TOKEN_URL = os.environ['GITHUB_OAUTH_ACCESS_TOKEN_URL']
+GITHUB_CLIENT_ID = get_var('GITHUB_CLIENT_ID')
+GITHUB_CLIENT_SECRET = get_var('GITHUB_CLIENT_SECRET')
+GITHUB_OAUTH_AUTHORIZE_URL = get_var('GITHUB_OAUTH_AUTHORIZE_URL')
+GITHUB_OAUTH_ACCESS_TOKEN_URL = get_var('GITHUB_OAUTH_ACCESS_TOKEN_URL')
 
 
 #Stack Overflow Integration
@@ -56,12 +58,12 @@ DRIBBBLE_API_URL = 'http://api.dribbble.com/players/'
 #Instagram Integration
 INSTAGRAM_INTEGRATION_ENABLED = True
 INSTAGRAM_API_URL = 'https://api.instagram.com/v1/'
-INSTAGRAM_ACCESS_TOKEN = os.environ['INSTAGRAM_ACCESS_TOKEN']
-INSTAGRAM_USER_ID = os.environ['INSTAGRAM_USER_ID']
+INSTAGRAM_ACCESS_TOKEN = get_var('INSTAGRAM_ACCESS_TOKEN')
+INSTAGRAM_USER_ID = get_var('INSTAGRAM_USER_ID')
 
 INSTAGRAM_OAUTH_ENABLED = True
-INSTAGRAM_CLIENT_ID = os.environ['INSTAGRAM_CLIENT_ID']
-INSTAGRAM_CLIENT_SECRET = os.environ['INSTAGRAM_CLIENT_SECRET']
+INSTAGRAM_CLIENT_ID = get_var('INSTAGRAM_CLIENT_ID')
+INSTAGRAM_CLIENT_SECRET = get_var('INSTAGRAM_CLIENT_SECRET')
 INSTAGRAM_OAUTH_AUTHORIZE_URL = 'https://api.instagram.com/oauth/authorize'
 INSTAGRAM_OAUTH_ACCESS_TOKEN_URL = 'https://api.instagram.com/oauth/access_token'
 
@@ -101,12 +103,8 @@ DISQUS_SHORTNAME = ''
 #Lastfm Integration
 LASTFM_INTEGRATION_ENABLED = True
 LASTFM_API_URL = 'http://ws.audioscrobbler.com/2.0/'
-<<<<<<< HEAD
-LASTFM_API_KEY = '[ENTER LASTFM API_KEY HERE, SEE LASTFM SETUP INSTRUCTIONS]'
-=======
 LASTFM_API_KEY = os.environ['LASTFM_API_KEY']
 LASTFM_USERNAME = os.environ['LASTFM_USERNAME']
->>>>>>> Adding os settings
 
 #SoundCloud Integration
 SOUNDCLOUD_INTEGRATION_ENABLED = True
@@ -140,6 +138,8 @@ STEAM_API_KEY = '[ENTER YOUR STEAM API KEY HERE, SEE STEAM SETUP INSTRUCTIONS]'
 FLICKR_INTEGRATION_ENABLED = True
 FLICKR_ID = '[ENTER YOUR FLICKR ID (NOT USERNAME) HERE]' # You do your username->ID lookup here: http://idgettr.com/
 
+LASTFM_API_KEY = get_var('LASTFM_API_KEY')
+LASTFM_USERNAME = get_var('LASTFM_USERNAME')
 
 SITEMAP_ENABLED = False
 
