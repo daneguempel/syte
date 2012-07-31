@@ -13,7 +13,7 @@ BLOG_PLATFORM = 'tumblr'  # Wordpress or tumblr
 
 #Blog Integration: Tumblr
 TUMBLR_BLOG_URL = 'daneguempel.tumblr.com'
-TUMBLR_API_URL = 'api.tumblr.com/v2/blog/{0}'.format(TUMBLR_BLOG_URL)
+TUMBLR_API_URL = 'http://api.tumblr.com/v2/blog/{0}'.format(TUMBLR_BLOG_URL)
 TUMBLR_API_KEY = get_var('TUMBLR_API_KEY')
 
 #Blog Integration: Wordpress
