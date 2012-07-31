@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-DEPLOYMENT_MODE = 'dev'
+DEPLOYMENT_MODE = 'prod'
 COMPRESS_REVISION_NUMBER = '1.1'
 
 BLOG_PLATFORM = 'tumblr'  # Wordpress or tumblr
@@ -138,6 +138,6 @@ if DEPLOYMENT_MODE == 'dev':
     DEBUG = True
 else:
     DEBUG = False
-    SITE_ROOT_URI = 'http://127.0.0.1:8000/'
+    SITE_ROOT_URI = 'http://morning-plains-1992.herokuapp.com/'
 
 MEDIA_URL = SITE_ROOT_URI + 'static/'
