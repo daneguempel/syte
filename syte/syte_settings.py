@@ -7,7 +7,7 @@ def get_var(var):
 		return ''
 
 DEPLOYMENT_MODE = 'prod'
-COMPRESS_REVISION_NUMBER = '1.2.2'
+COMPRESS_REVISION_NUMBER = '1.2.3'
 
 #Blog Integration: Tumblr
 TUMBLR_BLOG_URL = 'daneguempel.tumblr.com'
