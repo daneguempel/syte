@@ -1,11 +1,11 @@
 
 DEPLOYMENT_MODE = 'dev'
-COMPRESS_REVISION_NUMBER = '1.0'
+COMPRESS_REVISION_NUMBER = '1.1'
 
 #Blog Integration: Tumblr
-TUMBLR_BLOG_URL = '[ENTER TUMBLR BLOG URL] ex. rigoneri.tumblr.com'
-TUMBLR_API_URL = 'http://api.tumblr.com/v2/blog/{0}'.format(TUMBLR_BLOG_URL)
-TUMBLR_API_KEY = '[ENTER TUMBLR API KEY HERE, SEE TUMBLR SETUP INSTRUCTIONS]'
+TUMBLR_BLOG_URL = 'daneguempel.tumblr.com'
+TUMBLR_API_URL = 'api.tumblr.com/v2/blog/{0}'.format(TUMBLR_BLOG_URL)
+TUMBLR_API_KEY = ''
 
 #RSS Feed Integration: (by default use Tumbrl rss feed)
 RSS_FEED_ENABLED = True
@@ -33,7 +33,7 @@ GITHUB_OAUTH_ACCESS_TOKEN_URL = 'https://github.com/login/oauth/access_token'
 
 
 #Dribbble Integration
-DRIBBBLE_INTEGRATION_ENABLED = True
+DRIBBBLE_INTEGRATION_ENABLED = False
 DRIBBBLE_API_URL = 'http://api.dribbble.com/players/'
 
 
@@ -71,6 +71,6 @@ if DEPLOYMENT_MODE == 'dev':
     DEBUG = True
 else:
     DEBUG = False
-    SITE_ROOT_URI = '[ENTER PROD URL HERE] ex. http://rigoneri.herokuapp.com/'
+    SITE_ROOT_URI = 'http://127.0.0.1:8000/'
 
 MEDIA_URL = SITE_ROOT_URI + 'static/'
