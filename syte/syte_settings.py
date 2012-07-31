@@ -7,7 +7,7 @@ def get_var(var):
 		return ''
 
 DEPLOYMENT_MODE = 'prod'
-COMPRESS_REVISION_NUMBER = '1.2.1'
+COMPRESS_REVISION_NUMBER = '1.2.2'
 
 BLOG_PLATFORM = 'tumblr'  # Wordpress or tumblr
 
