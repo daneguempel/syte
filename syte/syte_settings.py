@@ -7,7 +7,7 @@ def get_var(var):
 		return ''
 
 DEPLOYMENT_MODE = 'prod'
-COMPRESS_REVISION_NUMBER = '1.1'
+COMPRESS_REVISION_NUMBER = '1.2'
 
 #Blog Integration: Tumblr
 TUMBLR_BLOG_URL = 'daneguempel.tumblr.com'
@@ -25,6 +25,8 @@ TWITTER_CONSUMER_KEY = get_var('TWITTER_CONSUMER_KEY')
 TWITTER_CONSUMER_SECRET = get_var('TWITTER_CONSUMER_SECRET')
 TWITTER_USER_KEY = get_var('TWITTER_USER_KEY')
 TWITTER_USER_SECRET = get_var('TWITTER_USER_SECRET')
+
+print TWITTER_USER_KEY
 
 
 #Github Integration
