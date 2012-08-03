@@ -1,12 +1,15 @@
 import os
 
+DEPLOYMENT_MODE = 'dev'
+
+
 def get_var(var):
 	if os.environ.has_key(var):
 		return os.environ[var]
 	else:
 		return ''
 
-DEPLOYMENT_MODE = 'prod'
+
 COMPRESS_REVISION_NUMBER = '1.2.3'
 
 #Blog Integration: Tumblr
@@ -26,15 +29,12 @@ TWITTER_CONSUMER_SECRET = get_var('TWITTER_CONSUMER_SECRET')
 TWITTER_USER_KEY = get_var('TWITTER_USER_KEY')
 TWITTER_USER_SECRET = get_var('TWITTER_USER_SECRET')
 
-print "TWITTER_USER_KEY=",TWITTER_USER_KEY
-
-
 #Github Integration
 GITHUB_INTEGRATION_ENABLED = True
 GITHUB_API_URL = 'https://api.github.com/'
 GITHUB_ACCESS_TOKEN = get_var('GITHUB_ACCESS_TOKEN')
 
-GITHUB_OAUTH_ENABLED = True
+GITHUB_OAUTH_ENABLED = False
 GITHUB_CLIENT_ID = get_var('GITHUB_CLIENT_ID')
 GITHUB_CLIENT_SECRET = get_var('GITHUB_CLIENT_SECRET')
 GITHUB_OAUTH_AUTHORIZE_URL = get_var('GITHUB_OAUTH_AUTHORIZE_URL')
@@ -83,3 +83,6 @@ else:
     SITE_ROOT_URI = 'http://morning-plains-1992.herokuapp.com/'
 
 MEDIA_URL = SITE_ROOT_URI + 'static/'
+
+if not DEPLOYMENT_MODE == 'prod':
+    from local_settings import *
