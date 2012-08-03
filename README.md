@@ -195,7 +195,7 @@ Once you have those two items from Github you have to enter them in your **syte_
 
 After you have entered those two items, folow the steps below for running your Syte locally on your machine. Once you have your Syte running navigate to `http://127.0.0.1:8000/github/auth`, you will be taken to Github's website and will be asked to sign in and authorize your application. After you authorized your application you will be taken back to your Syte and you will be given your ***Access Token***
 
-You can also git your access token via the github api using curl:
+You can also get your access token via the github api using curl:
 ```
 curl -i -u "username:password" https://api.github.com/authorizations
 ```
