@@ -1,6 +1,6 @@
 import os
 
-DEPLOYMENT_MODE = 'dev'
+DEPLOYMENT_MODE = 'prod'
 
 
 def get_var(var):
