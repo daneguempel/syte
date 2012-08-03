@@ -1,12 +1,14 @@
 # -*- coding: utf-8 -*-
 import os
+DEPLOYMENT_MODE = 'prod'
+
+
 def get_var(var):
 	if os.environ.has_key(var):
 		return os.environ[var]
 	else:
 		return ''
 
-DEPLOYMENT_MODE = 'prod'
 COMPRESS_REVISION_NUMBER = '1.2.3'
 
 BLOG_PLATFORM = 'tumblr'  # Wordpress or tumblr
