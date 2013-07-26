@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
-import os
 DEPLOYMENT_MODE = 'prod'
-
 
 def get_var(var):
 	if os.environ.has_key(var):
@@ -49,7 +47,7 @@ GITHUB_OAUTH_ACCESS_TOKEN_URL = get_var('GITHUB_OAUTH_ACCESS_TOKEN_URL')
 
 
 #Stack Overflow Integration
-STACKOVERFLOW_INTEGRATION_ENABLED = True
+STACKOVERFLOW_INTEGRATION_ENABLED = False
 STACKOVERFLOW_API_URL = 'http://api.stackoverflow.com/1.1/'
 
 
@@ -72,12 +70,12 @@ INSTAGRAM_OAUTH_ACCESS_TOKEN_URL = 'https://api.instagram.com/oauth/access_token
 
 
 #Foursquare Integration
-FOURSQUARE_INTEGRATION_ENABLED = True
+FOURSQUARE_INTEGRATION_ENABLED = False
 FOURSQUARE_API_URL = 'https://api.foursquare.com/v2/'
 FOURSQUARE_ACCESS_TOKEN = '[ENTER FOURSQUARE ACCESS TOKEN HERE, SEE FOURSQUARE SETUP INSTRUCTIONS]'
 FOURSQUARE_SHOW_CURRENT_DAY = True
 
-FOURSQUARE_OAUTH_ENABLED = True
+FOURSQUARE_OAUTH_ENABLED = False
 FOURSQUARE_CLIENT_ID = '[ENTER FOURSQUARE CLIENT_ID HERE, SEE FOURSQUARE SETUP INSTRUCTIONS]'
 FOURSQUARE_CLIENT_SECRET = '[ENTER FOURSQUARE CLIENT_SECRET HERE, SEE FOURSQUARE SETUP INSTRUCTIONS]'
 FOURSQUARE_OAUTH_AUTHORIZE_URL = 'https://foursquare.com/oauth2/authenticate'
@@ -104,13 +102,13 @@ DISQUS_SHORTNAME = ''
 
 
 #Lastfm Integration
-LASTFM_INTEGRATION_ENABLED = True
+LASTFM_INTEGRATION_ENABLED = False
 LASTFM_API_URL = 'http://ws.audioscrobbler.com/2.0/'
 LASTFM_API_KEY = get_var('LASTFM_API_KEY')
 LASTFM_USERNAME = get_var('LASTFM_USERNAME')
 
 #SoundCloud Integration
-SOUNDCLOUD_INTEGRATION_ENABLED = True
+SOUNDCLOUD_INTEGRATION_ENABLED = False
 SOUNDCLOUD_API_URL = 'https://api.soundcloud.com/'
 SOUNDCLOUD_CLIENT_ID = '[ENTER SOUNDCLOUD APPLICATION CLIENT_ID HERE]'
 SOUNDCLOUD_SHOW_ARTWORK = False
@@ -118,7 +116,7 @@ SOUNDCLOUD_PLAYER_COLOR = 'ff912b'
 
 
 #Bitbucket Integration
-BITBUCKET_INTEGRATION_ENABLED = True
+BITBUCKET_INTEGRATION_ENABLED = False
 BITBUCKET_API_URL = 'https://api.bitbucket.org/1.0/'
 # Forks count require one connection for each repository,
 # set BITBUCKET_SHOW_FORKS to false to disable
@@ -126,19 +124,19 @@ BITBUCKET_SHOW_FORKS = False
 
 
 #Tent.io Integration
-TENT_INTEGRATION_ENABLED = True
+TENT_INTEGRATION_ENABLED = False
 TENT_ENTITY_URI = '[ENTER YOUR ENTITY URI HERE] ex. https://yourname.tent.is'
 TENT_FEED_URL = '[ENTER A URL TO YOUR FEED] ex. https://yourname.tent.is'
 
 
 #Steam Integration
-STEAM_INTEGRATION_ENABLED = True
+STEAM_INTEGRATION_ENABLED = False
 STEAM_API_URL = 'http://api.steampowered.com/ISteamUser'
 STEAM_API_KEY = '[ENTER YOUR STEAM API KEY HERE, SEE STEAM SETUP INSTRUCTIONS]'
 
 
 #Flickr Integration
-FLICKR_INTEGRATION_ENABLED = True
+FLICKR_INTEGRATION_ENABLED = False
 FLICKR_ID = '[ENTER YOUR FLICKR ID (NOT USERNAME) HERE]' # You do your username->ID lookup here: http://idgettr.com/
 
 LASTFM_API_KEY = get_var('LASTFM_API_KEY')
@@ -154,3 +152,6 @@ else:
     SITE_ROOT_URI = 'http://morning-plains-1992.herokuapp.com/'
 
 MEDIA_URL = SITE_ROOT_URI + 'static/'
+
+if not DEPLOYMENT_MODE == 'prod':
+    from local_settings import *
