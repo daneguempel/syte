@@ -9,7 +9,7 @@ def get_var(var):
 	else:
 		return ''
 
-COMPRESS_REVISION_NUMBER = '1.2.3'
+COMPRESS_REVISION_NUMBER = '1.2.4'
 
 BLOG_PLATFORM = 'tumblr'  # Wordpress or tumblr
 
@@ -34,7 +34,6 @@ TWITTER_CONSUMER_SECRET = get_var('TWITTER_CONSUMER_SECRET')
 TWITTER_USER_KEY = get_var('TWITTER_USER_KEY')
 TWITTER_USER_SECRET = get_var('TWITTER_USER_SECRET')
 
-print "TWITTER_USER_KEY=",TWITTER_USER_KEY
 
 
 #Github Integration
@@ -107,8 +106,8 @@ DISQUS_SHORTNAME = ''
 #Lastfm Integration
 LASTFM_INTEGRATION_ENABLED = True
 LASTFM_API_URL = 'http://ws.audioscrobbler.com/2.0/'
-LASTFM_API_KEY = os.environ['LASTFM_API_KEY']
-LASTFM_USERNAME = os.environ['LASTFM_USERNAME']
+LASTFM_API_KEY = get_var('LASTFM_API_KEY')
+LASTFM_USERNAME = get_var('LASTFM_USERNAME')
 
 #SoundCloud Integration
 SOUNDCLOUD_INTEGRATION_ENABLED = True

@@ -21,3 +21,4 @@ def twitter_view(request, username):
     return HttpResponse(content=json.dumps(statuses_in_dict),
                         status=200,
                         content_type='application/json')
+
