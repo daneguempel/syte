@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-DEPLOYMENT_MODE = 'dev'
+DEPLOYMENT_MODE = 'prod'
 import os
 
 def get_var(var):
