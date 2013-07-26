@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
-DEPLOYMENT_MODE = 'prod'
+DEPLOYMENT_MODE = 'dev'
+import os
 
 def get_var(var):
 	if os.environ.has_key(var):
@@ -153,5 +154,3 @@ else:
 
 MEDIA_URL = SITE_ROOT_URI + 'static/'
 
-if not DEPLOYMENT_MODE == 'prod':
-    from local_settings import *
